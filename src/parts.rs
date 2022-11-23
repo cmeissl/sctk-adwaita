@@ -178,6 +178,7 @@ impl Part {
         let surface = surface.detach();
 
         let subsurface = subcompositor.get_subsurface(&surface, parent);
+        subsurface.place_below(parent);
 
         Part {
             surface,
